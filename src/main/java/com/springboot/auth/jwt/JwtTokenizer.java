@@ -44,6 +44,8 @@ public class JwtTokenizer {
         return Jwts.builder()
                 .setClaims(claims)
                 .setSubject(subject)
+//                getInstance => Calendar클래스 구현해준다.
+//                getTime() => Calendar를 Date로 바꿔준다.
                 .setIssuedAt(Calendar.getInstance().getTime())
                 .setExpiration(expiration)
                 .signWith(key)
